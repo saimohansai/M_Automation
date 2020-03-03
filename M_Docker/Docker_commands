@@ -1,0 +1,96 @@
+Docker commands
+
+
+docker search nginx
+
+docker pull nginx
+-----------------------------------------------------------------------
+1:- 
+
+
+Run container
+docker run -it -p 80:80 nginx /bin/bash   	# run docker image and enter to image
+docker run -dit -p 80:80 nginx /bin/bash 	# run docker image with out entering  (Detached mode )
+
+
+install ping in docker
+	apt-get install iputils-ping
+	 apt-get install net-tools
+	 
+---------------------------------------------------
+nginx start  and check status
+
+ service nginx start
+ service nginx status
+
+-----------------------------------------------------
+Exit from docker container
+	ctrl+p+q
+	
+---------------------------------------------------------
+Enter in to docker
+
+	docker attach container
+------------------------------------------------------------
+
+docker ps 				# see list of containers
+
+docker ps -a				#see list of running containers 
+ 
+ 
+docker stop container
+
+docker stop $(docker ps -aq)
+
+docker remove
+
+docker rm $(docker ps -aq) 
+-----------------------------------------------
+
+
+docker run --rm -it --name=ubuntuout --hostname=ubuntuin -p 8080:80 ubuntu bash
+
+--rm  # if we give --rm when run the container if we type exit button it will exit 
+
+Hostname is ubuntuin
+name of the container is 
+
+
+
+
+
+docker run --rm -it --name=ubuntuout --hostname=ubuntuin -p 8080:80 ubuntu bash
+docker run --rm -it --name=ubuntuout --hostname:ubuntu_in  -p 8080:80 ubuntu  bash
+
+
+
+
+ docker commit 9192047bbcfc  mpigelati/mysamples:1
+  501  docker images
+  502  docker push mpigelati/mysamples:tagname
+  503  docker login 
+  504  docker pudh mpigelati/mysamples:1
+  505  docker push mpigelati/mysamples:1
+  506  docker ps
+  507  docker images
+  508  docker run -it a3a6ea7816a6 bash
+  509  history 
+
+
+
+docker inspect container
+
+
+   docker rmi $(docker images -a -q )
+   docker stop $(docker ps -a)
+   docker rm  $(docker ps -a)
+   docker rmi $(docker images -a -q )
+ 
+
+
+
+
+
+
+
+
